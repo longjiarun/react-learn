@@ -1,0 +1,9 @@
+<h2 class="test">test 页面</h2>
+
+<%list.forEach(function(value){%>
+	<%
+		var user = value;
+	%>
+	<!--嵌入子模板-->
+	<% include ../test1/index.html %>
+<%})%>

@@ -1,0 +1,7 @@
+/node_modules/**
+/build/**
+/mock/**
+/src/lib/**
+/gulpfile.js
+/hap.server.js
+/hap.config.js

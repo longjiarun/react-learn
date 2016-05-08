@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection">
+
+    <link rel="preconnect" href="//assets.geilicdn.com">
+    <link rel="preconnect" href="//wd.geilicdn.com">
+
+    <link rel="dns-prefetch" href="//assets.geilicdn.com">
+    <link rel="dns-prefetch" href="//wd.geilicdn.com">
+
+    <link rel="shortcut icon" href="//wd.geilicdn.com/acb27801f3256ab74721c2f4da0e3c7e.png" type="image/x-icon">
+    <link href="//wd.geilicdn.com/acb27801f3256ab74721c2f4da0e3c7e.png" rel="apple-touch-icon-precomposed">
+
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>hap脚手架</title>
+
+    <!--内嵌css到页面中，开发模式时使用外联加载，去掉注释则去掉内嵌功能。data-href(内嵌时读取的属性)与href顺序不能调换-->
+    <!-- build:inlinecss -->
+    <link rel="stylesheet" data-href="/pages/test/index.css" href="$$_static_url_$$/pages/test/index.css">
+    <!-- endbuild -->
+</head>
+<body>
+
+<h2>静态引入页面</h2>
+<!--静态引入采用的是- include语法便签， include是动态编译使用的标签-->
+<%- include("../../component/test/index.html",{
+    list:[{
+        name:"王五1",
+        age:12
+    },{
+        name:"王五2",
+        age:13
+    },{
+        name:"王五3",
+        age:14
+    }]
+});%>
+
+<h2>动态的模板渲染</h2>
+<div id="J_html"></div>
+
+
+<!--内嵌js到页面中，开发模式时使用外联加载，去掉注释则去掉内嵌功能。data-src(内嵌时读取的属性)与src顺序不能调换-->
+<!-- build:inlinejs -->
+<script type="text/javascript" data-src="/pages/test/index.js" src="$$_static_url_$$/pages/test/index.js"></script>
+<!-- endbuild -->
+</body>
+</html>

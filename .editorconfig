@@ -1,0 +1,24 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# http://editorconfig.org
+
+root = true
+
+[*]
+
+# Change these settings to your own preference
+indent_style = space
+indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.html]
+#由于嵌套模板无法压缩，所以页面暂时采用tab缩进，相对于空格要少几个字符
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
